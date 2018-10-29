@@ -2,10 +2,13 @@
   flex-wrap: nowrap;
   overflow-x: hidden;
 
+
   @for $i from 1 through 6 {
-    &[data-elem-number="#{$i}"] {
-      .col {
-        min-width: 100% / $i;
+    @media (min-width: 1024px) {
+      &[data-elem-number="#{$i}"] {
+        .col {
+          min-width: 100% / $i;
+        }
       }
     }
   }

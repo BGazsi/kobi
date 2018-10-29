@@ -171,6 +171,11 @@ html {
 
     &:first-of-type {
       margin-top: 10px;
+      margin-left: 0;
+    }
+
+    &::after {
+      display: none;
     }
   }
 }

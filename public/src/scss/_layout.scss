@@ -191,6 +191,8 @@ html {
 @media(max-width: 768px) {
   .scrollable-list {
     overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    height:100%;
     flex-wrap: nowrap;
   }
 

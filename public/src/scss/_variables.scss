@@ -1,0 +1,16 @@
+$color-map: (
+  'black': #333,
+  'dark-gray': #666,
+  'gray': #999,
+  'light-gray': #f4f4f4,
+  'primary': #2b99ff,
+  'white': #fff
+);
+
+$headings-font-family: 'Playfair Display', Montserrat, Arial, serif;
+$headings-font-weight: 800;
+$headings-color: map-get($color-map, 'black');
+$h1-font-size: 36px;
+$h2-font-size: 32px;
+$h3-font-size: 24px;
+$h4-font-size: 20px;

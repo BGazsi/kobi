@@ -1,0 +1,57 @@
+.carousel {
+  flex-wrap: nowrap;
+  overflow-x: hidden;
+
+  @for $i from 1 through 6 {
+    &[data-elem-number="#{$i}"] {
+      .col {
+        min-width: 100% / $i;
+      }
+    }
+  }
+}
+
+.carousel-inner {
+  width: 100%;
+  display: flex;
+  will-change: transform;
+  transition: transform .6s ease-in-out;
+}
+
+.carousel-next,
+.carousel-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: map-get($color-map, 'white');
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  &.black {
+    color: map-get($color-map, 'black');
+  }
+
+  @media (max-width: 1023px) {
+    display: none;
+  }
+
+  .text-uppercase {
+    margin-top: 7px;
+  }
+}
+
+.carousel-next {
+  right: 120px;
+}
+
+.carousel-prev {
+  left: 120px;
+
+  img {
+    transform: rotateY(180deg);
+  }
+}
+

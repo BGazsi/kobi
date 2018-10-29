@@ -1,0 +1,53 @@
+body {
+  font-family: Montserrat, Arial, serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.3571;
+
+  @media(max-width: 1023px) {
+    font-size: 12px;
+  }
+}
+
+h1 {
+  line-height: 43px;
+}
+
+h2 {
+  font-weight: 400;
+  font-style: italic;
+}
+
+h2, h3 {
+  line-height: 38px;
+}
+
+h4 {
+  line-height: 27px;
+}
+
+.pronunciation {
+  font-family: Arial, serif;
+  color: map-get($color-map, 'gray');
+}
+
+article {
+  color: map-get($color-map, 'dark-gray');
+}
+
+@media(max-width: 1023px) {
+  h1 {
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  h2 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  h3, h4 {
+    font-size: 18px;
+    line-height: 29px;
+  }
+}

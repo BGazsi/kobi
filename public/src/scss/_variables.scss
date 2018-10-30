@@ -14,3 +14,10 @@ $h1-font-size: 36px;
 $h2-font-size: 32px;
 $h3-font-size: 24px;
 $h4-font-size: 20px;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 700px,
+  xl: 900px
+)

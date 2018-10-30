@@ -131,7 +131,7 @@ html {
   .info {
     display: none;
   }
-  @media(max-width: 1023px) {
+  @media(max-width: 1024px) {
     position: absolute;
 
     .info {
@@ -143,7 +143,7 @@ html {
 .footer {
   bottom: 0;
 
-  @media(max-width: 1023px) {
+  @media(max-width: 1024px) {
     display: none;
   }
 

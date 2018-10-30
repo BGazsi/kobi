@@ -83,7 +83,6 @@ const slider = {
     let newActiveSlide = document.querySelector('.slide.active + .slide')
     this.downScrollAnimation(activeSlide, newActiveSlide)
     this.changeSlide(newActiveSlide)
-    this.setIndicators(newActiveSlide)
   },
   downScrollAnimation: function (activeSlide, newActiveSlide) {
     if (!newActiveSlide || !activeSlide) {
@@ -126,7 +125,6 @@ const slider = {
     let newActiveSlide = document.querySelector('.slide.active').previousElementSibling
     this.upScrollAnimation(activeSlide, newActiveSlide)
     this.changeSlide(newActiveSlide, 100)
-    this.setIndicators(newActiveSlide)
   },
   upScrollAnimation: function (activeSlide, newActiveSlide) {
     if (!newActiveSlide || !activeSlide) {
@@ -178,17 +176,6 @@ const slider = {
     body.classList.remove('light-theme', 'dark-theme')
     body.classList.add(themePath)
     document.querySelector('[data-ref="footer"]').classList.toggle('hidden', slide.getAttribute('data-disable-footer'))
-  },
-  setIndicators: function (newActiveSlide) {
-    if (!newActiveSlide) {
-      return
-    }
-
-    document.querySelectorAll('[data-ref~="indicators"]').forEach(indicators => {
-      indicators.querySelectorAll('.indicator').forEach(indicator => {
-        indicator.classList.toggle('active', indexInParent(indicator) <= indexInParent(newActiveSlide))
-      })
-    })
   }
 }
 

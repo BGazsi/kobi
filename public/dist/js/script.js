@@ -86,7 +86,6 @@ var slider = {
     var newActiveSlide = document.querySelector('.slide.active + .slide');
     this.downScrollAnimation(activeSlide, newActiveSlide);
     this.changeSlide(newActiveSlide);
-    this.setIndicators(newActiveSlide);
   },
   downScrollAnimation: function downScrollAnimation(activeSlide, newActiveSlide) {
     if (!newActiveSlide || !activeSlide) {
@@ -126,7 +125,6 @@ var slider = {
     var newActiveSlide = document.querySelector('.slide.active').previousElementSibling;
     this.upScrollAnimation(activeSlide, newActiveSlide);
     this.changeSlide(newActiveSlide, 100);
-    this.setIndicators(newActiveSlide);
   },
   upScrollAnimation: function upScrollAnimation(activeSlide, newActiveSlide) {
     if (!newActiveSlide || !activeSlide) {
@@ -180,17 +178,6 @@ var slider = {
     body.classList.remove('light-theme', 'dark-theme');
     body.classList.add(themePath);
     document.querySelector('[data-ref="footer"]').classList.toggle('hidden', slide.getAttribute('data-disable-footer'));
-  },
-  setIndicators: function setIndicators(newActiveSlide) {
-    if (!newActiveSlide) {
-      return;
-    }
-
-    document.querySelectorAll('[data-ref~="indicators"]').forEach(function (indicators) {
-      indicators.querySelectorAll('.indicator').forEach(function (indicator) {
-        indicator.classList.toggle('active', indexInParent(indicator) <= indexInParent(newActiveSlide));
-      });
-    });
   }
 };
 

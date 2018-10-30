@@ -57,6 +57,19 @@ html {
   }
 }
 
+.contact-slides .slide-content {
+  @media(min-width: 1024px) {
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  min-height: 100vh;
+
+  .footer-contact-info:first-of-type {
+    margin-left: 0;
+  }
+}
+
 @for $i from 1 through 10 {
   .slide:nth-of-type(#{$i}) {
     z-index: 20 - $i;

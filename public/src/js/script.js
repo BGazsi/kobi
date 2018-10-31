@@ -35,20 +35,6 @@ function deviceOS() {
   }
 }
 
-function indexInParent (node) {
-  let children = node.parentNode.childNodes
-  let num = 0
-  for (let i = 0; i < children.length; i++) {
-    if (children[i] === node) {
-      return num
-    }
-    if (children[i].nodeType === 1) {
-      num++
-    }
-  }
-  return -1
-}
-
 const slider = {
   init: function () {
     if (!!deviceOS() || window.innerWidth <= 1023 ) {
@@ -58,6 +44,7 @@ const slider = {
       return
     }
     window.scrollTo({}, 0)
+    document.querySelector('body').style.overflow = 'hidden'
     window.addEventListener('wheel', this.scrollEventHandler.bind(this))
   },
   scrollEventHandler: function (event) {

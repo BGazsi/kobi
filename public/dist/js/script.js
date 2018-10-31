@@ -36,20 +36,6 @@ function deviceOS() {
   }
 }
 
-function indexInParent(node) {
-  var children = node.parentNode.childNodes;
-  var num = 0;
-  for (var i = 0; i < children.length; i++) {
-    if (children[i] === node) {
-      return num;
-    }
-    if (children[i].nodeType === 1) {
-      num++;
-    }
-  }
-  return -1;
-}
-
 var slider = {
   init: function init() {
     if (!!deviceOS() || window.innerWidth <= 1023) {
@@ -59,6 +45,7 @@ var slider = {
       return;
     }
     window.scrollTo({}, 0);
+    document.querySelector('body').style.overflow = 'hidden';
     window.addEventListener('wheel', this.scrollEventHandler.bind(this));
   },
   scrollEventHandler: function scrollEventHandler(event) {

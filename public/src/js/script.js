@@ -172,8 +172,8 @@ function Carousel (element) {
     this.transform = 0
     this.elemNumber = this.element.getAttribute('data-elem-number') || 3
     this.elemWidth = 100 / this.elemNumber
-    this.nextButton = this.element.querySelector('[data-ref="next"]')
-    this.prevButton = this.element.querySelector('[data-ref="prev"]')
+    this.nextButton = this.element.parentElement.querySelector('[data-ref="next"]')
+    this.prevButton = this.element.parentElement.querySelector('[data-ref="prev"]')
     this.nextButton.addEventListener('click', this.showNext.bind(this))
     this.prevButton.addEventListener('click', this.showPrev.bind(this))
   }

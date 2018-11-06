@@ -12,6 +12,15 @@
       }
     }
   }
+
+  &[data-elem-number="1.5"] {
+    -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 20%);
+    mask-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 20%);
+
+    .col {
+      min-width: 66.6667%;
+    }
+  }
 }
 
 .carousel-inner {

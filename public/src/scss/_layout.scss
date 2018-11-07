@@ -6,6 +6,18 @@ body {
   overflow-x: hidden;
 }
 
+.continuous {
+  .slide {
+    min-height: 0;
+
+    &-content {
+      padding: 120px 20px;
+      height: auto;
+      overflow: unset;
+    }
+  }
+}
+
 .slide {
   position: relative;
   display: flex;

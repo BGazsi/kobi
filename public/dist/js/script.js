@@ -38,7 +38,8 @@ function deviceOS() {
 
 var slider = {
   init: function init() {
-    if (!!deviceOS() || window.innerWidth <= 1023) {
+    if (!!deviceOS() || window.innerWidth <= 1023 || window.innerHeight < 700) {
+      document.querySelector('body').classList.add('continuous');
       document.querySelectorAll('.shape-wrap').forEach(function (elem) {
         elem.classList.add('hidden');
       });

@@ -37,7 +37,8 @@ function deviceOS() {
 
 const slider = {
   init: function () {
-    if (!!deviceOS() || window.innerWidth <= 1023 ) {
+    if (!!deviceOS() || window.innerWidth <= 1023  || window.innerHeight < 700) {
+      document.querySelector('body').classList.add('continuous')
       document.querySelectorAll('.shape-wrap').forEach(elem => {
         elem.classList.add('hidden')
       })

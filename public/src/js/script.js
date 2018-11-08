@@ -37,6 +37,11 @@ function deviceOS() {
 
 const slider = {
   init: function () {
+    if (!deviceOS() && window.innerHeight < 700) {
+      document.querySelector('footer').classList.add('hidden')
+      document.querySelector('.info').style.display = 'block'
+      document.querySelector('header').style.position = 'absolute'
+    }
     if (!!deviceOS() || window.innerWidth <= 1023  || window.innerHeight < 700) {
       document.querySelector('body').classList.add('continuous')
       document.querySelectorAll('.shape-wrap').forEach(elem => {

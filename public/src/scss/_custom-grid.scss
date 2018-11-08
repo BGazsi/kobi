@@ -65,15 +65,15 @@
   }
 
   @media(max-width: 767px) {
-    margin-left: -3px;
-    margin-right: -3px;
+    margin-left: -15px;
+    margin-right: -15px;
 
     .col {
-      padding-left: 3px;
-      padding-right: 3px;
+      padding-left: 15px;
+      padding-right: 15px;
 
       &.scrollable-element {
-        min-width: 40%;
+        min-width: 55%;
       }
     }
   }
